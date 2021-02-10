@@ -1,0 +1,91 @@
+
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+
+<title>Login</title>
+
+<link rel="stylesheet" type="text/css" href="css/login.css">
+
+
+</head>
+
+
+
+<body>
+$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+$(endif)
+<div class="box">
+
+
+	
+<form name="login" action="$(link-login-only)" method="post"
+					    $(if chap-id) onSubmit="return doLogin()" $(endif)>
+						<input type="hidden" name="dst" value="$(link-orig)" />
+						<input type="hidden" name="popup" value="true" />
+<div class="wrapper">
+
+
+	<img class="logo" src="img/logo.png">
+	
+<input type="text" name="username"  placeholder="Usuario">
+<input type="password" name="password" placeholder="Contraseña">
+<input type="submit"  >
+
+$(if trial == 'yes')
+<div class="free">
+
+Pruebe el servicio gratis por 1 hora
+
+ <a class="link"  href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">Ingresar gratis</a>
+
+</div>
+ .$(endif)
+
+
+
+
+
+
+<div class="error">
+	
+$(error)
+
+</div>
+
+
+</div>
+</form>
+
+</div>
+
+<script type="text/javascript">
+<!--
+  document.login.username.focus();
+//-->
+</script>
+
+</body>
+</html>

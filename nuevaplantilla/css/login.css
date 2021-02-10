@@ -1,0 +1,105 @@
+body{
+
+	background-color:rgba(0,0,255,0.8);
+}
+
+.logo{
+
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	margin:auto;
+
+	margin-bottom: 5px;
+}
+.box{
+
+
+	height: 100%;
+
+	display: flex;
+
+	align-items: center;
+	justify-content: center;
+}
+
+
+.wrapper{ max-width: 500px;
+
+	display: flex;
+
+	flex-wrap: wrap;
+}
+
+
+.wrapper input[type="text"]{
+
+width: 70%;
+padding: 1rem;
+text-align: center;
+font-size: 1rem;
+background: #FFFFFF;
+color:Black;
+margin-bottom: 2px;
+
+}
+
+.wrapper input[type="password"]{
+
+width: 100%;
+padding: 1rem;
+text-align: center;
+font-size: 1rem;
+background: #FFFFFF;
+color:Black;
+margin-bottom: 2px;
+}
+
+.wrapper input[type="submit"]{
+
+width: 30%;
+padding: 1rem;
+text-align: center;
+font-size: 1rem;
+background: red;
+color:white;
+margin-top: 2px;
+}
+
+
+.wrapper input[type="submit"]:hover{
+
+
+background: orange;
+
+}
+
+.error{
+	width: 100%;
+	padding: 2rem;
+text-align: center;
+background: red;
+color: white;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+
+
+.free{
+	width: 100%;
+	padding: 2rem;
+text-align: center;
+background: green;
+color: white;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+
+.link{
+	text-decoration: none;
+
+	padding: 1rem;
+	background: blue;
+	border-radius: 5px;
+	color:white;
+}
